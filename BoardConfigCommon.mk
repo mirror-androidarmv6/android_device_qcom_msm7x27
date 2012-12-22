@@ -19,6 +19,7 @@ TARGET_ARCH := arm
 TARGET_CPU_ABI := armeabi
 TARGET_CPU_ABI2 := armeabi-v6l
 TARGET_ARCH_VARIANT := armv6-vfp
+TARGET_BOARD_PLATFORM := msm7x27
 
 # Graphics
 USE_OPENGL_RENDERER := true
