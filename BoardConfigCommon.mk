@@ -46,9 +46,6 @@ COMMON_GLOBAL_CFLAGS += -DQCOM_NO_SECURE_PLAYBACK
 # Camera
 TARGET_DISABLE_ARM_PIE := true
 
-# Bootanimation
-TARGET_BOOTANIMATION_USE_RGB565 := true
-
 # Javascript and Browser
 WITH_JIT := true
 ENABLE_JSC_JIT := true
