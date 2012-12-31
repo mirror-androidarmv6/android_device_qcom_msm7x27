@@ -1,5 +1,9 @@
 $(call inherit-product, vendor/qcom/msm7x27/qcom-vendor.mk)
 
+# Root files
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/initlogo.rle:root/initlogo.rle \
+
 # Graphics
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.opengles.version=131072 \
