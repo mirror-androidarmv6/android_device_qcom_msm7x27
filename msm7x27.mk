@@ -13,7 +13,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
 
 # Dithering
 PRODUCT_PROPERTY_OVERRIDES += \
-    persist.sys.use_dithering=2
+    persist.sys.use_dithering=0
 
 # Stagefright
 PRODUCT_PROPERTY_OVERRIDES += \
