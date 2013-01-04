@@ -11,10 +11,6 @@ PRODUCT_PROPERTY_OVERRIDES += \
     hwui.print_config=choice \
     persist.sys.strictmode.visual=false
 
-# Dithering
-PRODUCT_PROPERTY_OVERRIDES += \
-    persist.sys.use_dithering=2
-
 # Stagefright
 PRODUCT_PROPERTY_OVERRIDES += \
     media.stagefright.enable-player=true \
