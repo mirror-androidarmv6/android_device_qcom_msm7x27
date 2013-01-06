@@ -18,7 +18,8 @@ PRODUCT_PROPERTY_OVERRIDES += \
     media.stagefright.enable-scan=false \
     media.stagefright.enable-http=true \
     media.stagefright.enable-aac=true \
-    media.stagefright.enable-qcp=true
+    media.stagefright.enable-qcp=true \
+    media.ringtone.force_repeat=1
 
 # Camcorder
 PRODUCT_PROPERTY_OVERRIDES += \
