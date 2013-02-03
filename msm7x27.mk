@@ -38,6 +38,7 @@ PRODUCT_PACKAGES += \
     libqdutils \
     libtilerenderer \
     gralloc.msm7x27 \
+    hwcomposer.msm7x27 \
     copybit.msm7x27
 
 # Media
