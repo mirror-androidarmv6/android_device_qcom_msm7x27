@@ -43,7 +43,9 @@ COMMON_GLOBAL_CFLAGS += -DQCOM_NO_SECURE_PLAYBACK
 TARGET_DISABLE_ARM_PIE := true
 
 # Bluetooth
+ifneq (true,$(BOARD_HAVE_BLUETOOTH_BLUEZ))
 BOARD_HAVE_BLUETOOTH := true
+endif
 
 # Javascript, Browser and Webkit
 WITH_JIT := true
