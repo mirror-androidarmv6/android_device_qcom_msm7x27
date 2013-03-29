@@ -50,6 +50,11 @@ PRODUCT_PACKAGES += \
 PRODUCT_COPY_FILES += \
         system/bluetooth/data/main.le.conf:system/etc/bluetooth/main.conf
 
+ifeq ($(BOARD_HAVE_BLUETOOTH_BLUEZ),true)
+PRODUCT_COPY_FILES += \
+    system/bluetooth/data/stack.conf:system/etc/bluetooth/stack.conf
+endif
+
 # These are the hardware-specific features
 PRODUCT_COPY_FILES += \
          frameworks/native/data/etc/handheld_core_hardware.xml:system/etc/permissions/handheld_core_hardware.xml \
