@@ -48,11 +48,11 @@ PRODUCT_PACKAGES += \
 
 # Bluetooth configuration files
 PRODUCT_COPY_FILES += \
-        system/bluetooth/data/main.le.conf:system/etc/bluetooth/main.conf
+    system/bluetooth/data/main.le.conf:system/etc/bluetooth/main.conf
 
 ifeq ($(BOARD_HAVE_BLUETOOTH_BLUEZ),true)
-PRODUCT_COPY_FILES += \
-    system/bluetooth/data/stack.conf:system/etc/bluetooth/stack.conf
+PRODUCT_PACKAGES += javax.btobex
+PRODUCT_COPY_FILES += system/bluetooth/data/stack.conf:system/etc/bluetooth/stack.conf
 endif
 
 # These are the hardware-specific features
