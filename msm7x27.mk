@@ -48,9 +48,13 @@ PRODUCT_PACKAGES += \
 
 # Bluetooth configuration files
 PRODUCT_COPY_FILES += \
-        system/bluetooth/data/main.le.conf:system/etc/bluetooth/main.conf
+    system/bluetooth/data/main.le.conf:system/etc/bluetooth/main.conf
 
 ifeq ($(BOARD_HAVE_BLUETOOTH_BLUEZ),true)
+PRODUCT_PACKAGES += \
+    javax.btobex
+
+PACKAGES.javax.btobex.OVERRIDES := javax.obex
 PRODUCT_COPY_FILES += \
     system/bluetooth/data/stack.conf:system/etc/bluetooth/stack.conf
 endif
