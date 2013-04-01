@@ -36,7 +36,6 @@ PRODUCT_PACKAGES += \
     libmemalloc \
     liboverlay \
     libqdutils \
-    libtilerenderer \
     gralloc.msm7x27 \
     copybit.msm7x27
 
