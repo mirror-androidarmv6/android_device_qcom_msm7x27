@@ -1,4 +1,4 @@
-$(call inherit-product, vendor/qcom/msm7x27/qcom-vendor.mk)
+## QCOM COMMON DEVICE
 
 # Graphics
 PRODUCT_PROPERTY_OVERRIDES += \
@@ -54,19 +54,30 @@ PRODUCT_COPY_FILES += \
     system/bluetooth/data/main.le.conf:system/etc/bluetooth/main.conf \
     system/bluetooth/data/network.conf:system/etc/bluetooth/network.conf
 
+# BlueZ support (import init.qcom-bluez.rc)
 ifeq ($(BOARD_HAVE_BLUETOOTH_BLUEZ),true)
-PRODUCT_PACKAGES += javax.btobex
+PRODUCT_COPY_FILES += device/qcom/msm7x27/init.qcom.bluez.rc:root/init.qcom.bluez.rc
 PRODUCT_COPY_FILES += system/bluetooth/data/stack.conf:system/etc/bluetooth/stack.conf
+PRODUCT_PACKAGES += \
+    javax.btobex \
+    bluetoothd \
+    libbluetoothd \
+    hcitool \
+    hciconfig \
+    hciattach
 endif
 
 # These are the hardware-specific features
 PRODUCT_COPY_FILES += \
-         frameworks/native/data/etc/handheld_core_hardware.xml:system/etc/permissions/handheld_core_hardware.xml \
-         frameworks/native/data/etc/android.hardware.location.gps.xml:system/etc/permissions/android.hardware.location.gps.xml \
-         frameworks/native/data/etc/android.hardware.wifi.xml:system/etc/permissions/android.hardware.wifi.xml \
-         frameworks/native/data/etc/android.hardware.sensor.proximity.xml:system/etc/permissions/android.hardware.sensor.proximity.xml \
-         frameworks/native/data/etc/android.software.sip.voip.xml:system/etc/permissions/android.software.sip.voip.xml \
-         frameworks/native/data/etc/android.hardware.telephony.gsm.xml:system/etc/permissions/android.hardware.telephony.gsm.xml
+    frameworks/native/data/etc/handheld_core_hardware.xml:system/etc/permissions/handheld_core_hardware.xml \
+    frameworks/native/data/etc/android.hardware.location.gps.xml:system/etc/permissions/android.hardware.location.gps.xml \
+    frameworks/native/data/etc/android.hardware.wifi.xml:system/etc/permissions/android.hardware.wifi.xml \
+    frameworks/native/data/etc/android.hardware.sensor.proximity.xml:system/etc/permissions/android.hardware.sensor.proximity.xml \
+    frameworks/native/data/etc/android.software.sip.voip.xml:system/etc/permissions/android.software.sip.voip.xml \
+    frameworks/native/data/etc/android.hardware.telephony.gsm.xml:system/etc/permissions/android.hardware.telephony.gsm.xml
+
+# QCOM vendor blobs (adreno200)
+$(call inherit-product, vendor/qcom/msm7x27/qcom-vendor.mk)
 
 # qcom-msm7x27 overlays
 DEVICE_PACKAGE_OVERLAYS += device/qcom/msm7x27/overlay
