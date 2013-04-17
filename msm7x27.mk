@@ -1,5 +1,3 @@
-$(call inherit-product, vendor/qcom/msm7x27/qcom-vendor.mk)
-
 # Graphics
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.opengles.version=131072 \
@@ -47,17 +45,7 @@ PRODUCT_PACKAGES += \
 
 # Bluetooth configuration files
 PRODUCT_COPY_FILES += \
-    system/bluetooth/data/audio.conf:system/etc/bluetooth/audio.conf \
-    system/bluetooth/data/auto_pairing.conf:system/etc/bluetooth/auto_pairing.conf \
-    system/bluetooth/data/blacklist.conf:system/etc/bluetooth/blacklist.conf \
-    system/bluetooth/data/input.conf:system/etc/bluetooth/input.conf \
-    system/bluetooth/data/main.le.conf:system/etc/bluetooth/main.conf \
-    system/bluetooth/data/network.conf:system/etc/bluetooth/network.conf
-
-ifeq ($(BOARD_HAVE_BLUETOOTH_BLUEZ),true)
-PRODUCT_PACKAGES += javax.btobex
-PRODUCT_COPY_FILES += system/bluetooth/data/stack.conf:system/etc/bluetooth/stack.conf
-endif
+    system/bluetooth/data/main.le.conf:system/etc/bluetooth/main.conf
 
 # These are the hardware-specific features
 PRODUCT_COPY_FILES += \
@@ -67,6 +55,9 @@ PRODUCT_COPY_FILES += \
          frameworks/native/data/etc/android.hardware.sensor.proximity.xml:system/etc/permissions/android.hardware.sensor.proximity.xml \
          frameworks/native/data/etc/android.software.sip.voip.xml:system/etc/permissions/android.software.sip.voip.xml \
          frameworks/native/data/etc/android.hardware.telephony.gsm.xml:system/etc/permissions/android.hardware.telephony.gsm.xml
+
+# Inherit QCOM vendor
+$(call inherit-product, vendor/qcom/msm7x27/qcom-vendor.mk)
 
 # qcom-msm7x27 overlays
 DEVICE_PACKAGE_OVERLAYS += device/qcom/msm7x27/overlay
