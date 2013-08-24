@@ -16,6 +16,7 @@
 
 # Target
 TARGET_ARCH := arm
+TARGET_ARCH_LOWMEM := true
 TARGET_ARCH_VARIANT := armv6-vfp
 TARGET_BOARD_PLATFORM := msm7x27
 TARGET_CPU_ABI := armeabi-v6l
