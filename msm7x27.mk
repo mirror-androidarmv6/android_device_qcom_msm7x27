@@ -3,10 +3,12 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.opengles.version=131072 \
     ro.opengles.surface.rgb565=true \
     com.qc.hardware=true \
+    debug.composition.type=dyn \
     debug.enabletr=false \
     debug.hwui.render_dirty_regions=false \
     debug.qctwa.statusbar=1 \
     debug.qctwa.preservebuf=1 \
+    debug.sf.hw=1 \
     hwui.print_config=choice \
     persist.sys.strictmode.visual=false
 
@@ -40,7 +42,8 @@ PRODUCT_PACKAGES += \
     liboverlay \
     libqdutils \
     gralloc.msm7x27 \
-    copybit.msm7x27
+    copybit.msm7x27 \
+    hwcomposer.msm7x27
 
 # Media
 PRODUCT_PACKAGES += \
