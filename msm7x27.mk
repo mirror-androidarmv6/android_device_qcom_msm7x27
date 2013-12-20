@@ -8,7 +8,8 @@ PRODUCT_PROPERTY_OVERRIDES += \
     debug.qctwa.statusbar=1 \
     debug.qctwa.preservebuf=1 \
     hwui.print_config=choice \
-    persist.sys.strictmode.visual=false
+    persist.sys.strictmode.visual=false \
+    ro.bq.gpu_to_cpu_unsupported=1
 
 # Stagefright
 PRODUCT_PROPERTY_OVERRIDES += \
