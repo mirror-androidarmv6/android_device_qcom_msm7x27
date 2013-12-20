@@ -29,6 +29,10 @@ PRODUCT_PROPERTY_OVERRIDES += \
     dalvik.vm.heaptargetutilization=0.25 \
     dalvik.vm.jit.codecachesize=0
 
+# Memory
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.config.low_ram=true
+
 # Audio
 PRODUCT_PACKAGES += \
     audio.a2dp.default \
