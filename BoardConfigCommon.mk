@@ -38,6 +38,7 @@ BOARD_EGL_CFG                           := device/qcom/msm7x27/egl.cfg
 BOARD_EGL_NEEDS_LEGACY_FB               := true
 BOARD_EGL_NEEDS_FNW                     := true
 BOARD_USE_MHEAP_SCREENSHOT              := true
+TARGET_DOESNT_USE_FENCE_SYNC            := true
 
 # QCOM hardware
 BOARD_USES_QCOM_HARDWARE                := true
