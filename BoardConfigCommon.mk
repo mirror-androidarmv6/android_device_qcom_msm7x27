@@ -35,7 +35,7 @@ TARGET_NO_HW_OVERLAY                    := true
 TARGET_QCOM_DISPLAY_VARIANT             := legacy
 BOARD_ADRENO_DECIDE_TEXTURE_TARGET      := true
 BOARD_EGL_CFG                           := device/qcom/msm7x27/egl.cfg
-BOARD_EGL_NEEDS_LEGACY_FB               := true
+BOARD_EGL_NEEDS_FNW                     := true
 BOARD_EGL_WORKAROUND_BUG_10194508       := true
 
 # QCOM hardware
