@@ -52,6 +52,14 @@ PRODUCT_PACKAGES += \
     libmm-omxcore \
     libOmxCore
 
+# WebKit
+PRODUCT_PACKAGES += \
+    libwebcore
+
+# Webkit (classic webview provider)
+PRODUCT_PROPERTY_OVERRIDES += \
+    persist.webview.provider=classic
+
 # These are the hardware-specific features
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/handheld_core_hardware.xml:system/etc/permissions/handheld_core_hardware.xml \
