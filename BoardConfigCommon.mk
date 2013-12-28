@@ -50,6 +50,7 @@ TARGET_QCOM_LEGACY_OMX                  := true
 TARGET_QCOM_MEDIA_VARIANT               := legacy
 TARGET_ENABLE_QC_AV_ENHANCEMENTS        := true
 COMMON_GLOBAL_CFLAGS                    += -DQCOM_NO_SECURE_PLAYBACK
+COMMON_GLOBAL_CFLAGS                    += -DUSE_SUBMIT_ONE_INPUT_BUFFER
 
 # Camera
 TARGET_DISABLE_ARM_PIE          := true
