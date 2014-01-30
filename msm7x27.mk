@@ -31,7 +31,8 @@ PRODUCT_PROPERTY_OVERRIDES += \
 
 # Memory
 PRODUCT_PROPERTY_OVERRIDES += \
-    ro.config.low_ram=true
+    ro.config.low_ram=true \
+    ro.ksm.default=1
 
 # Audio
 PRODUCT_PACKAGES += \
