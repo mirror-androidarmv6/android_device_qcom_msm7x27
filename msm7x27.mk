@@ -25,8 +25,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
 
 # Dalvik
 PRODUCT_PROPERTY_OVERRIDES += \
-    dalvik.vm.heaptargetutilization=0.25 \
-    dalvik.vm.execution-mode=int:fast
+    dalvik.vm.heaptargetutilization=0.25
 
 # Audio
 PRODUCT_PACKAGES += \
