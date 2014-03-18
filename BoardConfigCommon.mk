@@ -61,3 +61,6 @@ ENABLE_JSC_JIT          := true
 JS_ENGINE               := v8
 HTTP                    := chrome
 TARGET_FORCE_CPU_UPLOAD := true
+
+# Squisher
+TARGET_SYSTEMIMAGE_USE_SQUISHER := true
