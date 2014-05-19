@@ -24,10 +24,6 @@ PRODUCT_PROPERTY_OVERRIDES += \
 PRODUCT_PROPERTY_OVERRIDES += \
     debug.camcorder.disablemeta=1
 
-# Dalvik
-PRODUCT_PROPERTY_OVERRIDES += \
-    dalvik.vm.heaptargetutilization=0.25
-
 # Memory
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.config.low_ram=true
