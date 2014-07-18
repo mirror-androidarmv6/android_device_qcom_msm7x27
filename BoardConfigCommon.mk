@@ -15,6 +15,7 @@
 #
 
 # Target
+ARCH_ARM_HAVE_TLS_REGISTER := true
 TARGET_ARCH            := arm
 TARGET_ARCH_LOWMEM     := true
 TARGET_ARCH_VARIANT    := armv6-vfp
